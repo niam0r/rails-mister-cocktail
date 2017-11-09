@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  ingredient: one
+  cocktail: one
+
+two:
+  description: MyText
+  ingredient: two
+  cocktail: two
