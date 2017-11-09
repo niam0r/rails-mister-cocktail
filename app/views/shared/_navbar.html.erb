@@ -1,8 +1,15 @@
 <div class="navbar-wagon">
 
-  <%= image_tag "icon.png", :class => "avatar"%>
+  <%= image_tag "icon.png", class: "avatar"%>
 
-  <%= link_to(cocktails_path) do %>
-    <i class="fa fa-undo" aria-hidden="true">Back to index</i>
+  <%= link_to(new_cocktail_path, class: "navbar-wagon-link") do %>
+    <i class="fa fa-plus text-center" aria-hidden="true">Add a Cocktail</i>
   <% end %>
+
+  <%= link_to(cocktails_path, class: "navbar-wagon-link") do %>
+    <i class="fa fa-undo text-right" aria-hidden="true">Back to index</i>
+  <% end %>
+
+
+
 </div>

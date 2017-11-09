@@ -1,0 +1,10 @@
+body {
+  background: #C02425;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #F0CB35, #C02425);
+  background: linear-gradient(to left, #F0CB35, #C02425);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}

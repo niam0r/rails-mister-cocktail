@@ -9,14 +9,28 @@
 require 'open-uri'
 require 'json'
 
-url = 'http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+# url = 'http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 
-serialized_ingredients = open(url).read
+# serialized_ingredients = open(url).read
 
-ingredients = JSON.parse(serialized_ingredients)
+# ingredients = JSON.parse(serialized_ingredients)
 
-ingredients["drinks"].each do |ingredient|
-  Ingredient.create(name: ingredient["strIngredient1"])
+# ingredients["drinks"].each do |ingredient|
+#   Ingredient.create(name: ingredient["strIngredient1"])
+# end
+
+
+url = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?s='
+
+serialized = open(url).read
+
+cocktails = JSON.parse(serialized)
+
+cocktails["drinks"].each do |cocktail|
+  Cocktail.create(name: Faker::Hipster.sentence(2),
+                  description: cocktail["strInstructions"]
+
+    )
 end
 
 

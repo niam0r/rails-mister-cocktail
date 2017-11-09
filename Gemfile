@@ -61,3 +61,4 @@ gem 'autoprefixer-rails'
 gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'faker'
