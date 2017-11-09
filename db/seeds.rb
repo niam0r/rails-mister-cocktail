@@ -28,10 +28,13 @@ cocktails = JSON.parse(serialized)
 
 cocktails["drinks"].each do |cocktail|
   Cocktail.create(name: Faker::Hipster.sentence(2),
-                  description: cocktail["strInstructions"]
+                  description: cocktail["strInstructions"],
+                  picture: cocktail["strDrinkThumb"]
 
     )
 end
+
+# rails g migration add_picture_to_cocktails picture:string
 
 
 
