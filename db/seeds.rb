@@ -27,7 +27,7 @@ serialized = open(url).read
 cocktails = JSON.parse(serialized)
 
 cocktails["drinks"].each do |cocktail|
-  c = Cocktail.new(name: Faker::Coffee.blend_name,
+  c = Cocktail.new(name: cocktail["strDrink"],
                   description: cocktail["strInstructions"]
     )
 
